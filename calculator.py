@@ -26,6 +26,8 @@ while True:
     if operator == "+":
         result = add(float(num1), float(num2))
     elif operator == "-":
-        result = subtract(float(num1), float(num2)) 
+        result = subtract(float(num1), float(num2))
+    elif operator == "*":
+        result = multiply(float(num1), float(num2)) 
       
     print(result)
