@@ -37,5 +37,7 @@ while True:
         result = cube(float(num1))
     elif operator == "pow":
         result = power(float(num1), float(num2))
+    elif operator == "mod":
+        result = mod(float(num1), float(num2))
 
     print(result)
