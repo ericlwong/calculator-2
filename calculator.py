@@ -29,5 +29,7 @@ while True:
         result = subtract(float(num1), float(num2))
     elif operator == "*":
         result = multiply(float(num1), float(num2)) 
-      
+    elif operator == "/":
+        result = divide(float(num1), float(num2))  
+    
     print(result)
