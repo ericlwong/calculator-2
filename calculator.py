@@ -31,5 +31,7 @@ while True:
         result = multiply(float(num1), float(num2)) 
     elif operator == "/":
         result = divide(float(num1), float(num2))  
-    
+    elif operator == "square":
+        result = square(float(num1))
+
     print(result)
