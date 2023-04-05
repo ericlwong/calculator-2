@@ -3,7 +3,6 @@
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
-
 while True:
     user_input = input("> ")
 
@@ -18,26 +17,34 @@ while True:
 
     if len(tokens) == 3:
         num2 = tokens[2]
-    elif len(tokens) == 4:
-        num3 = tokens[3]
 
-    result = None
+    try:
+        if not num1.isdigit() or not num2.isdigit():
+            print("Please enter numbers after the operator.")
+            continue
 
-    if operator == "+":
-        result = add(float(num1), float(num2))
-    elif operator == "-":
-        result = subtract(float(num1), float(num2))
-    elif operator == "*":
-        result = multiply(float(num1), float(num2)) 
-    elif operator == "/":
-        result = divide(float(num1), float(num2))  
-    elif operator == "square":
-        result = square(float(num1))
-    elif operator == "cube":
-        result = cube(float(num1))
-    elif operator == "pow":
-        result = power(float(num1), float(num2))
-    elif operator == "mod":
-        result = mod(float(num1), float(num2))
+        result = None
 
-    print(result)
+        if operator == "+":
+            result = add(float(num1), float(num2))
+        elif operator == "-":
+            result = subtract(float(num1), float(num2))
+        elif operator == "*":
+            result = multiply(float(num1), float(num2)) 
+        elif operator == "/":
+            result = divide(float(num1), float(num2))  
+        elif operator == "square":
+            result = square(float(num1))
+        elif operator == "cube":
+            result = cube(float(num1))
+        elif operator == "pow":
+            result = power(float(num1), float(num2))
+        elif operator == "mod":
+            result = mod(float(num1), float(num2))
+        else:
+            print("Please input a valid operator.")
+
+        print(result)
+        
+    except NameError:
+        print("Please provide the appropriate length of numbers for each operator.")
