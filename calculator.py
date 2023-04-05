@@ -35,5 +35,7 @@ while True:
         result = square(float(num1))
     elif operator == "cube":
         result = cube(float(num1))
+    elif operator == "pow":
+        result = power(float(num1), float(num2))
 
     print(result)
