@@ -33,5 +33,7 @@ while True:
         result = divide(float(num1), float(num2))  
     elif operator == "square":
         result = square(float(num1))
+    elif operator == "cube":
+        result = cube(float(num1))
 
     print(result)
